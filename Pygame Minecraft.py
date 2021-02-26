@@ -764,6 +764,26 @@ while run:
                             blocklist[columns+x+num][y].blocktype = 7
                             for dnum in range(depth):
                                 blocklist[columns+x+num][y+dnum].blocktype = 7
+                    fr = random.randint(1, 3)
+                    if fr == 3:
+                        #generate a tree
+                        barkheight = random.randint(1,2)
+                        barkly = 3
+                        barkx = random.randint(1, 9)
+                        leafh = 2
+                        leafw = 3
+                        for num in range(barkheight):
+                            blocklist[barkx+columns][barkly-num].blocktype = 11
+                        for num in range(leafh):
+                            blockidn = f'b{lblockid}'
+                            blockidn = block(12, barkx+columns, barkly-barkheight-num)
+                            blocklist[barkx+columns][barkly-barkheight-num] = blockidn
+                            lblockid += 1
+                        for num in range(1, 4):
+                            if num == 1:
+                                blocklist[barkx-1+columns][barkly-barkheight].blocktype = 12
+                            if num == 3:
+                                blocklist[barkx+1+columns][barkly-barkheight].blocktype = 12
                     fr = random.randint(1,2)
                     if fr == 2:
                         #generate a hill
