@@ -1,0 +1,16 @@
+1 and 5 = dirt
+2 and 3 = stone
+4 = coal
+6 = water
+7 = lava
+8 = bedrock
+9 = iron
+10 = diamond
+11 = bark
+12 = leaf
+13 = gravel
+14 = sand
+15 = reef
+16 = reef2
+17 = stone bg
+18 = gold
